@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Range Input Generator</title>
+    <meta name="description" content="" />
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./assets/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta
+      name="msapplication-config"
+      content="./assets/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="./assets/favicon/favicon.ico" type="image/x-icon" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-awesome 5.15 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap 5.3 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <link rel="stylesheet" href="./assets/style/custom-range-input.css" />
+    <link rel="stylesheet" href="./assets/style/credits.css" />
+  </head>
+
+  <body
+    data-theme="dark"
+    class="w-100 d-flex flex-column align-items-center bg-0 color-0"
+  >
+    <header class="w-100 d-flex align-items-center justify-content-center">
+      <nav
+        class="navbar w-100 h-100 d-flex align-items-center justify-content-center px-3 bg-1 color-0"
+      >
+        <div class="container-fluid">
+          <a
+            id="rig"
+            class="navbar-brand d-flex flex-row gap-3 color-0 m-0 p-0"
+            href="#"
+          >
+            <div class="logo rounded-circle">
+              <div
+                id="circle-frame"
+                class="bg-0-contrast rounded-circle d-flex align-items-center justify-content-center"
+              >
+                <div
+                  id="inner-circle-out"
+                  class="rounded-circle d-flex align-items-center justify-content-center bg-0"
+                >
+                  <div
+                    id="inner-circle-in"
+                    class="rounded-circle d-flex align-items-center justify-content-center bg-0-contrast"
+                  >
+                    <div
+                      class="range-out bg-0 rounded d-flex align-items-center justify-content-center"
+                    >
+                      <div
+                        class="range-in bg-0-contrast rounded d-flex align-items-center justify-content-center"
+                      ></div>
+                      <div
+                        class="knob-out bg-0 rounded-circle d-flex align-items-center justify-content-center"
+                      >
+                        <div class="knob-in bg-0-contrast rounded-circle"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="rig-title fw-light"
+              ><span class="fw-normal color-0">R</span>ange<br /><span
+                class="fw-normal color-0"
+                >I</span
+              >nput<br /><span class="fw-normal color-0">G</span>enerator</span
+            >
+          </a>
+          <div
+            id="darklight-1"
+            class="theme-switcher d-flex align-items-center justify-content-center"
+          >
+            <input class="sun" type="checkbox" id="sun" />
+            <span class="moon"></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="sub-header">
+      <div
+        id="range-1-box"
+        class="ranges-box d-flex align-items-center justify-content-center rounded-5 m-3 p-1 px-3"
+      >
+        <input id="range-1" type="range" />
+      </div>
+    </div>
+
+    <main class="p-3 px-5 w-100">
+      <div id="input-range-styles" class="w-100">
+        <div id="basic-style" class="w-100">
+          <div
+            class="input-group m-auto"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Choose a width for your range input"
+          >
+            <span class="input-group-text bg-1 color-0 border-color-1"
+              >width</span
+            >
+            <input
+              id="custom-width"
+              type="number"
+              class="form-control bg-1 color-0 border-color-1"
+              min="100"
+              value="300"
+              max="500"
+            />
+          </div>
+
+          <div
+            class="input-group m-auto"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Choose a height for your range input"
+          >
+            <span class="input-group-text bg-1 color-0 border-color-1"
+              >height</span
+            >
+            <input
+              id="custom-height"
+              type="number"
+              class="form-control bg-1 color-0 border-color-1"
+              min="0"
+              value="16"
+              max="50"
+            />
+          </div>
+
+          <div
+            class="input-group m-auto"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Flag the checkbox to enable the background color picker for your range input"
+          >
+            <input
+              id="enable-bg-color"
+              class="form-check-input form-control bg-1 color-0 border-color-1 mt-0 w-10"
+              type="checkbox"
+              value=""
+            />
+            <span class="input-group-text bg-1 color-0 border-color-1 w-40"
+              >background-color</span
+            >
+            <input
+              disabled
+              id="custom-bg-color"
+              type="color"
+              value="#ffffff"
+              class="form-control bg-1 color-0 border-color-1 w-50"
+            />
+          </div>
+
+          <div
+            class="input-group m-auto"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Make a border for your range input"
+          >
+            <span class="input-group-text bg-1 color-0 border-color-1"
+              >border</span
+            >
+            <input
+              id="border-width"
+              type="number"
+              class="form-control bg-1 color-0 border-color-1 w-16"
+              min="0"
+              value="0"
+              max="5"
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Choose a width for your range input border"
+            />
+            <select
+              id="border-style"
+              class="form-select w-16 bg-1 color-0 border-color-1"
+            >
+              <option selected>Solid</option>
+              <option value="1">dotted</option>
+              <option value="2">dashed</option>
+              <option value="3">double</option>
+              <option value="4">groove</option>
+              <option value="5">ridge</option>
+              <option value="6">inset</option>
+              <option value="4">outset</option>
+              <option value="5">none</option>
+              <option value="6">hidden</option>
+            </select>
+            <input
+              id="custom-bg-color"
+              type="color"
+              class="form-control bg-1 color-0 border-color-1 w-16"
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Pick a color for your range input border"
+            />
+          </div>
+        </div>
+
+        <div class="hover"></div>
+
+        <div class="active"></div>
+      </div>
+    </main>
+
+    <footer
+      class="d-flex align-items-center justify-content-center position-fixed bottom-0 w-100"
+    >
+      <nav class="navbar w-100 h-100 bg-1">
+        <div class="container-fluid d-flex">
+          <div class="credits color-0">
+            ©2023 by<i></i><span><strong>Antonio Bertuccio</strong></span>
+          </div>
+          <a
+            target="_blank"
+            href="https://toughengineer.github.io/demo/slider-styler/slider-styler.html#explanation"
+            >open website</a
+          >
+        </div>
+      </nav>
+    </footer>
+
+    <!-- js bootstrap popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <!-- js bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <!-- js scripts -->
+    <script src="./javascript/popper.js"></script>
+    <script src="./javascript/custom-range-input.js"></script>
+    <script src="./javascript/dark-light-theme.js"></script>
+    <script src="./javascript/script.js"></script>
+  </body>
+</html>
