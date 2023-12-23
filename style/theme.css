@@ -1,0 +1,54 @@
+/* theme settings */
+
+[data-theme="light"] {
+  --bg-0: #fff;
+  --bg-0-contrast: #333;
+  --bg-1: #eee;
+  --bg-1-contrast: #555;
+  --color-0: #000;
+  --color-1: #737373;
+  --border-color-0: #dbdbdb;
+}
+
+[data-theme="dark"] {
+  --bg-0: #000;
+  --bg-0-contrast: #ccc;
+  --bg-1: #222;
+  --bg-1-contrast: #aaa;
+  --color-0: #eee;
+  --color-1: #a8a8a8;
+  --border-color-0: #363636;
+}
+
+.bg-0 {
+  background-color: var(--bg-0) !important;
+  transition: all 0.25s ease;
+}
+
+.bg-0-contrast {
+  background-color: var(--bg-0-contrast) !important;
+}
+
+.bg-1 {
+  background-color: var(--bg-1) !important;
+  transition: all 0.25s ease;
+}
+
+.bg-1-contrast {
+  background-color: var(--bg-1-contrast) !important;
+}
+
+.color-0 {
+  color: var(--color-0) !important;
+  transition: all 0.25s ease;
+}
+
+.color-1 {
+  color: var(--color-1) !important;
+  transition: all 0.25s ease;
+}
+
+.border-color-0 {
+  border-color: var(--border-color-0) !important;
+  transition: all 0.25s ease;
+}

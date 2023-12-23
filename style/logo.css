@@ -1,0 +1,86 @@
+/* logo */
+
+.logo {
+  margin-top: -24px !important;
+  margin-left: -4px !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: none;
+  width: 100px;
+  height: 100px;
+  scale: 0.35;
+}
+
+#circle-frame {
+  width: 100%;
+  height: 100%;
+}
+
+#inner-circle-out {
+  width: 90%;
+  height: 90%;
+}
+
+#inner-circle-in {
+  width: 90%;
+  height: 90%;
+}
+
+.range-out {
+  width: 10px;
+  height: 80%;
+  rotate: 45deg;
+  animation: rotate infinite 3s alternate ease-in-out;
+}
+
+@keyframes rotate {
+  from {
+    rotate: 75deg;
+  }
+  to {
+    rotate: 100deg;
+  }
+}
+
+.range-in {
+  position: absolute;
+  bottom: 3px;
+  width: 5px;
+  height: 70%;
+  animation: fill infinite 3s alternate ease-in-out;
+}
+
+@keyframes fill {
+  from {
+    height: 70%;
+  }
+  to {
+    height: 30%;
+  }
+}
+
+.knob-out {
+  position: absolute;
+  top: 30;
+  width: 20px;
+  height: 20px;
+  animation: slide infinite 3s alternate ease-in-out;
+}
+
+@keyframes slide {
+  from {
+    top: 10%;
+  }
+  to {
+    top: 50%;
+  }
+}
+
+.knob-in {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+}
