@@ -98,8 +98,10 @@ header {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-color: red;
-  height: 16px;
+  background-color: #fff;
+  height: 10px;
+  border: 1px solid #ff0000;
+  border-radius: 10px;
 }
 
 /* * input style */
