@@ -52,3 +52,57 @@
   border-color: var(--border-color-0) !important;
   transition: all 0.25s ease;
 }
+
+nav #darklight-1 {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  position: relative;
+  border-radius: 9999px;
+}
+
+nav input {
+  z-index: 1;
+  width: 1.9rem;
+  height: 1.9rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  border-radius: 9999px;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-color: rgb(255, 200, 0);
+  transition: all 0.25s ease;
+}
+
+nav .moon {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  background-color: #222222;
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+nav input:checked ~ .moon {
+  height: 2rem;
+  width: 0rem;
+  border-style: solid;
+  border: 0;
+  border-radius: 9999px;
+  top: 50%;
+  left: 150%;
+  background-color: rgb(0, 0, 0);
+  transform: translate(-50%, -50%);
+}
